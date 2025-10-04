@@ -91,7 +91,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Database\DatabaseInitializer.cs" />
+    <Compile Include="Database\Queries\CustomerQueries .cs" />
     <Compile Include="Database\Queries\EmployeeQueries.cs" />
+    <Compile Include="Database\Queries\GoodsQueries.cs" />
+    <Compile Include="Database\Queries\GoodsTypeQueries.cs" />
+    <Compile Include="Database\Queries\PositionQueries.cs" />
+    <Compile Include="Database\Queries\SuppliersQueries.cs" />
+    <Compile Include="Database\Queries\WarehouseQueries.cs" />
     <Compile Include="Database\SQLiteHelper.cs" />
     <Compile Include="Models\ITable.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />

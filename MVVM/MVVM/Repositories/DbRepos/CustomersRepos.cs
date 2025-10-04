@@ -21,19 +21,17 @@ namespace MVVM.Repositories
             }
         public override void Add(T entity)
         {
-            if (entity is Employee employee)
+            if (entity is Customers customer)
             {
                 Dictionary<string, object> parms = new Dictionary<string, object>();
-                parms.Add("@Id", employee.Id);
-                parms.Add("@FullName", employee.FullName);
-                parms.Add("@Age", employee.Age);
-                parms.Add("@Gender", employee.Gender);
-                parms.Add("@Address", employee.Address);
-                parms.Add("@Phone", employee.Phone);
-                parms.Add("@Pass", employee.Pass);
-                parms.Add("@PositionId", employee.PositionId);
-
-                _SQLiteHelper.ExecuteNonQuery(EmployeeQueries.InsertEmployee, parms);
+                parms.Add("@Id", customer.Id);
+                parms.Add("@FullName", customer.FullName);
+                parms.Add("@Address", customer.Address);
+                parms.Add("@Phone", customer.Phone);
+                parms.Add("@NeedGoods1", customer.NeedGoods1);
+                parms.Add("@NeedGoods2", customer.NeedGoods2);
+                parms.Add("@NeedGoods3", customer.NeedGoods3);
+        _SQLiteHelper.ExecuteNonQuery(EmployeeQueries.InsertEmployee, parms);
             }
         }
         public override void Delete(int id)
