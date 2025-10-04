@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MVVM.ViewModels.NavigationService;
+using MVVM.ViewModels.PageViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +15,26 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MVVM
+namespace MVVM.View
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly INavigationService _navigationService;
+
+        // Этот конструктор теперь будет вызываться через DI контейнер
         public MainWindow()
         {
+            _navigationService = new ViewModels.NavigationService.NavigationService();
             InitializeComponent();
+
+            // Устанавливаем Frame для навигации
+            _navigationService.SetFrame(Employee);
+
+            // Навигация на стартовую страницу
+            _navigationService.NavigateTo<Employee>();
         }
     }
 }

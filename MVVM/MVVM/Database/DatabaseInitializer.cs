@@ -45,13 +45,13 @@ namespace MVVM.Database
                 )",
                 @"CREATE TABLE IF NOT EXISTS Goods(
                      Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                     GoodsId INTEGER NOT NULL,
+                     TypeId INTEGER NOT NULL,
                      Manufacturer TEXT NOT NULL,
                      FullName TEXT NOT NULL,
                      StorageConditions TEXT,
                      Package TEXT,
                      ExpirationDate TEXT CHECK(date(ExpirationDate) IS NOT NULL),
-                     FOREIGN KEY (GoodsId) REFERENCES GoodsTypes(Id)
+                     FOREIGN KEY (Id) REFERENCES GoodsTypes(Id)
                      
                 )", 
                 @"CREATE TABLE IF NOT EXISTS GoodsTypes (

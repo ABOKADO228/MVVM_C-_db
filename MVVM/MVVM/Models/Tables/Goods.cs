@@ -10,7 +10,7 @@ namespace MVVM.Models.Tables
 {
     public class Goods : ITable
     {
-        public int GoodsId { get; set; }
+        public int Id { get; set; }
         public string TypeId { get; set; }
         public string Manufacturer {  get; set; }
         public string Name { get; set; }

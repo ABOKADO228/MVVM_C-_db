@@ -13,9 +13,9 @@ using System.Threading.Tasks;
 namespace MVVM.Repositories
 {
 
-    public class EmployeeRepos<T> : BaseRepository<T>  where T : class
+    public class Customers<T> : BaseRepository<T>  where T : class
     { 
-        public EmployeeRepos()
+        public Customers()
             {
             _SQLiteHelper = new Database.SQLiteHelper();
             }
@@ -38,7 +38,7 @@ namespace MVVM.Repositories
         }
         public override void Delete(int id)
         {
-            Employee employee = new Employee();
+            Customers employee = new Customers();
             Dictionary<string, object> parms = new Dictionary<string, object>();
             parms.Add("@Id", employee.Id);
             _SQLiteHelper.ExecuteNonQuery(EmployeeQueries.DeleteEmployee, parms);

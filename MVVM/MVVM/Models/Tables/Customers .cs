@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MVVM.Models.Tables
 {
-    internal class Customers : ITable
+    public class Customers : ITable
     {
         public int Id { get; set; }
         public string FullName { get; set; }

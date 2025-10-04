@@ -1,6 +1,7 @@
 ﻿using MVVM.Database;
 using MVVM.Models.Tables;
 using MVVM.ViewModels;
+using MVVM.ViewModels.SubVeiwModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,9 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVVM.Models
+namespace MVVM.ViewModels.SubViewModels
 {
-    public class EmployeeViewModel : ViewModelBase
+    public class EmployeeViewModel : ViewModelBase, ITableView
     {
         private readonly Employee _employee;
         public EmployeeViewModel(Employee employee)
